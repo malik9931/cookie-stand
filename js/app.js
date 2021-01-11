@@ -167,7 +167,7 @@ allCookiesPerHour: [],
 calcCookiesPerHour: function () {
     var cookiesPerHr = [];
     for (var i = 0; i < 14; i++) {
-        cookiesPerHr[i] = Math.floor(this.allCustPerHour[i] * this.avgCookSalesPerCust);
+        cookiesPerHr[i] = Math.ceil(this.allCustPerHour[i] * this.avgCookSalesPerCust);
     }
     return cookiesPerHr;
 
