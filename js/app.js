@@ -8,6 +8,15 @@ var table = document.createElement('table');
 getFirstRow.appendChild(table);
 
 
+// craet image and append it in header
+
+var headPage =document.getElementById('header');
+var headImg= document.createElement('img');
+headPage.appendChild(headImg);
+headImg.setAttribute('src','img/salmon.png');
+
+
+
 // creat Header raw and append it in table
 var firstHeadingRow = document.createElement('tr');
 table.appendChild(firstHeadingRow);
