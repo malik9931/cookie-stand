@@ -1,4 +1,4 @@
-
+'use strict';
 var workingHours = ['6:00am','7:00am ','8:00am ','9:00am','10:00am','11:00am','12:00pm','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm', 'Daily Location Total'];
 
 var finalTable= [];
@@ -6,6 +6,15 @@ var finalTable= [];
 var getFirstRow = document.getElementById('main');
 var table = document.createElement('table');
 getFirstRow.appendChild(table);
+
+
+// craet image and append it in header
+
+var headPage =document.getElementById('header');
+var headImg= document.createElement('img');
+headPage.appendChild(headImg);
+headImg.setAttribute('src','img/salmon.png');
+
 
 
 // creat Header raw and append it in table
@@ -25,7 +34,7 @@ for(var x = 0 ; x < workingHours.length; x++){
 
 // Summation of 6 am colum
 
-sum = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var sum = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 
 // Creating the Constructor
