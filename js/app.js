@@ -100,9 +100,6 @@ table.appendChild(shopRow);
 
 // creat td and append it in tr
 
-
-
-
 this.allCookiesPerHour.unshift(this.name);
 this.allCookiesPerHour.push(this.total);
 // console.log(this.allCookiesPerHour);
@@ -129,7 +126,7 @@ for(var s = 0 ; s < sum.length; s++){
 
 };
 
-
+// Creating objects
 
 // seattle shop
 
