@@ -193,8 +193,69 @@ function RandomNumOfCustPerHour(min, max) {
 /////////////////
   
 
+
+// Adding shops Form
+
+// function Branches(name, minHouralyCust, maxHouralyCust, avgCookSalesPerCust)
+
+var form = document.getElementById('container');
+form.addEventListener('submit',addingShop);
+
+function addingShop(event){
+    var shopInputedName = event.target.shopNameInput.value;
+    
+    var minHouralyCustInputed = parseInt(event.target.minHouralyCustInput.value);
+
+    var maxHouralyCustInputed = parseInt(event.target.maxHouralyCustInput.value);
+
+    
+    var avgCookSalesPerCustInputed = parseInt(event.target.avgCookSalesPerCustInput.value);
+
+
+    if(minHouralyCustInputed>maxHouralyCustInputed){
+        alert('the Min is grater than the Max?!')
+    }else{
+           var newShop = new Branches (shopInputedName, minHouralyCustInputed, maxHouralyCustInputed, avgCookSalesPerCustInputed);}
+
+    
+    // var container = document.getElementBy('container');
+    // container.innerHTML=''
+    
+    newShop.randomNumOfCust();
+    newShop.calcCookiesPerHour();
+    newShop.totalResult();
+    newShop.render();
+    // Tp prevent Refrishing after Submition
+    event.preventDefault();
+
+   
+var rowCount = table.rows.length;
+table.deleteRow(rowCount -2);
+ 
 // creat Footer raw and append it in table
 var lastRow = document.createElement('tr');
+table.appendChild(lastRow);
+
+
+var firstColFooterRowTH = document.createElement('th');
+lastRow.appendChild(firstColFooterRowTH);
+firstColFooterRowTH.textContent=['Total',];
+
+// creat th and append it in tr
+
+for(var s = 0 ; s < sum.length; s++){
+    
+    var sumRow = document.createElement('th');
+    lastRow.appendChild(sumRow);
+    finalTable.push(sumRow.textContent= sum[s]);
+}
+
+}
+
+///////////////////////////////////////////////////////////////////////////
+// creat Footer raw and append it in table
+var lastRow = document.createElement('tr');
+lastRow.setAttribute('id', 'last');
 table.appendChild(lastRow);
 
 var firstColFooterRowTH = document.createElement('th');
@@ -208,7 +269,3 @@ for(var s = 0 ; s < sum.length; s++){
     lastRow.appendChild(sumRow);
     finalTable.push(sumRow.textContent= sum[s]);
 }
-
-console.log(sum);
-
-
