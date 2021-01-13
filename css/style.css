@@ -58,3 +58,15 @@ tr:last-child {
 tr:last-child td:not(:first-child) {
   color: #220901;
 }
+
+input:invalid {
+  border: 2px dashed rgb(176, 201, 230);
+}
+
+input:invalid:required {
+  background-image: linear-gradient(to right, rgb(219, 214, 215), lightgreen);
+}
+
+input:valid {
+  border: 2px solid black;
+}
