@@ -6,5 +6,18 @@
   display: inline;
 }
 
-body {
+header > div {
+  width: 967px;
+  height: 300px;
+}
+
+#firstimg {
+  width: 300px;
+  height: 300px;
+  /* float: left; */
+}
+
+#secimg {
+  width: 300px;
+  height: 300px;
 }
